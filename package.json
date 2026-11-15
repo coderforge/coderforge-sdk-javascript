@@ -1,6 +1,6 @@
 {
   "name": "@coderforge/cloud-sdk",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "CloudBuilder Function capabilities and streaming HTTP routing",
   "type": "module",
   "license": "MIT",

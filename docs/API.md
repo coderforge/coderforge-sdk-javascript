@@ -6,7 +6,7 @@ Warm non-writing requests do not wait on VFS; source updates invalidate the modu
 graph between invocations. Writes retain version-checked, acknowledged atomic commits.
 See the contract for freshness and conflicts.
 
-Version0.1.1 API; protocol v1. MIT, copyright 2026 CoderForge.org Ltd.
+Version 1.0.0 API; protocol v1. MIT, copyright 2026 CoderForge.org Ltd.
 Package: `@coderforge/cloud-sdk`. Typed ES modules, zero runtime dependencies,
 modern browser Fetch/Streams APIs or Node >=20. TypeScript compiles ahead of time.
 
