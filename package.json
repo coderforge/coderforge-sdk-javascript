@@ -1,0 +1,53 @@
+{
+  "name": "@coderforge/cloud-sdk",
+  "version": "0.1.1",
+  "description": "CloudBuilder Function capabilities and streaming HTTP routing",
+  "type": "module",
+  "license": "MIT",
+  "author": "CoderForge.org Ltd",
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./http": {
+      "types": "./dist/http.d.ts",
+      "import": "./dist/http.js"
+    },
+    "./fetch": {
+      "types": "./dist/fetch.d.ts",
+      "import": "./dist/fetch.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "registry": "https://git.coderforge.org/api/packages/coderforge/npm/",
+    "access": "restricted"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepack": "npm run build",
+    "test": "node --test tests/core.test.mjs tests/native.test.mjs",
+    "check-types": "tsc --noEmit --strict --target ES2022 --module NodeNext --moduleResolution NodeNext tests/consumer.mts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.coderforge.org/coderforge/coderforge-sdk-javascript.git"
+  },
+  "homepage": "https://git.coderforge.org/coderforge/coderforge-sdk-javascript",
+  "bugs": {
+    "url": "https://git.coderforge.org/coderforge/coderforge-sdk-javascript/issues"
+  },
+  "devDependencies": {
+    "typescript": "5.6.3"
+  }
+}
